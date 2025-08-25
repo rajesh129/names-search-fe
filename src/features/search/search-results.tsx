@@ -1,11 +1,13 @@
 // src/features/search/SearchResults.tsx
 import * as React from 'react'
-import { Stack, Paper, Typography, Pagination, CircularProgress, Divider, Box } from '@mui/material'
+import { Stack, Paper, Typography, Pagination, CircularProgress, Divider, Box, IconButton } from '@mui/material'
 import type { NameItem } from '../../types/get-names'
 import { SearchResultTitle, SearchTypePrimary, SearchTypeSecondary } from './style'
 import { useTranslation } from 'react-i18next'
 import theme from '../../theme'
 import { StyledChip } from '../../components/ui/FrequentlySearchedNames/style'
+import VolumeUpIcon from '@mui/icons-material/VolumeUp';
+import { useTamilTTS } from '../../hooks/useTamilTTS'
 
 export function SearchResults({
   items,
@@ -25,6 +27,7 @@ export function SearchResults({
   onPageChange: (p: number) => void
 }) {
     const {t} = useTranslation();
+    const { speak, stop, hasTamilVoice } = useTamilTTS();
 
   if (loading) {
     return (
@@ -55,7 +58,10 @@ export function SearchResults({
 
       {items.map((r, idx) => (
         <Paper key={`${r.tamil}-${idx}`} sx={{ p: 2 }}>
-          <SearchTypePrimary variant="subtitle1">{r.tamil}</SearchTypePrimary>
+          <SearchTypePrimary variant="subtitle1">
+            {r.tamil}
+            <IconButton onClick={() => speak(r.tamil)}><VolumeUpIcon /></IconButton>
+        </SearchTypePrimary>
           <SearchTypeSecondary variant="body2">
             <strong>English:</strong> {r.english.join(', ') || '—'}
           </SearchTypeSecondary>

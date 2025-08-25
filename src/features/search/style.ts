@@ -1,7 +1,7 @@
 import { styled, Typography } from "@mui/material";
 
-export const SearchResultTitle = styled('h3')(({ theme }) => ({
-  ...theme.typography.h3,
+export const SearchResultTitle = styled('h4')(({ theme }) => ({
+  ...theme.typography.h4,
   color: theme.palette.text.primary,
   paddingBottom: theme.spacing(2),    // spacing helper
   margin: 0,
