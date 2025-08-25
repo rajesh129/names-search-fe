@@ -18,7 +18,6 @@ const initial: UserProfile = {
 
 export const useUserStore = create<State & Actions>((set) => ({
   profile: initial,
-  setProfile: (data) =>
-    set((state) => ({ profile: { ...state.profile, ...data } })),
+  setProfile: (data) => set((state) => ({ profile: { ...state.profile, ...data } })),
   reset: () => set({ profile: initial }),
 }))

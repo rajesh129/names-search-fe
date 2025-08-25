@@ -31,7 +31,9 @@ export default function LanguageGate() {
     }
 
     ensureLang()
-    return () => { cancelled = true }
+    return () => {
+      cancelled = true
+    }
     // include i18n.resolvedLanguage to catch lazy init
   }, [target, i18n])
 

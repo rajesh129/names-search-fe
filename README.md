@@ -1,6 +1,7 @@
 # React 19 + TypeScript + Formik + Yup + Zustand (Vite)
 
 A minimal, batteries‑included scaffold for front‑end apps using:
+
 - **React 19**
 - **TypeScript**
 - **Vite**

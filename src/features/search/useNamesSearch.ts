@@ -52,10 +52,9 @@ export function useNamesSearch({
         })
       } catch (e: any) {
         if (e?.name === 'CanceledError' || e?.code === 'ERR_CANCELED') return
-        const msg =
-          e?.message?.includes('Network Error')
-            ? 'Network error. In dev, enable Vite proxy or API CORS.'
-            : e?.message || 'Failed to fetch results'
+        const msg = e?.message?.includes('Network Error')
+          ? 'Network error. In dev, enable Vite proxy or API CORS.'
+          : e?.message || 'Failed to fetch results'
         setState({ items: [], total: 0, loading: false, error: msg })
       }
     })()

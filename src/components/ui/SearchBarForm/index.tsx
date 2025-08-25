@@ -15,7 +15,7 @@ export function SearchForm({
   onSubmitQuery: (q: string) => void
   title?: string
 }) {
-  const {t} = useTranslation();
+  const { t } = useTranslation()
   return (
     <Formik
       initialValues={{ query: initialQuery }}
@@ -33,7 +33,9 @@ export function SearchForm({
               onChange={handleChange('query')}
               error={Boolean(touched.query && errors.query)}
               helperText={
-                touched.query && errors.query ? (errors.query as string) : t('home.searchHelperText')
+                touched.query && errors.query
+                  ? (errors.query as string)
+                  : t('home.searchHelperText')
               }
               // IconButton in SearchBar has type="submit"
             />

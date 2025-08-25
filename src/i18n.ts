@@ -10,11 +10,7 @@ const supported = ['en', 'ta', 'fr'] as const
 i18n
   .use(new i18nextICU())
   .use(LanguageDetector)
-  .use(
-    resourcesToBackend((lng: string, ns: string) =>
-      import(`./locales/${lng}/${ns}.json`)
-    )
-  )
+  .use(resourcesToBackend((lng: string, ns: string) => import(`./locales/${lng}/${ns}.json`)))
   .use(initReactI18next)
   .init({
     fallbackLng: 'en',
@@ -24,11 +20,11 @@ i18n
     detection: {
       // 👇 ensure the URL /:lng/... wins on hard reload
       order: ['path', 'querystring', 'localStorage', 'navigator'],
-      lookupFromPathIndex: 0,        // /en/home -> 'en'
+      lookupFromPathIndex: 0, // /en/home -> 'en'
       lookupQuerystring: 'lng',
       caches: ['localStorage'],
     },
-    load: 'languageOnly',            // 'en-US' -> 'en'
+    load: 'languageOnly', // 'en-US' -> 'en'
     interpolation: { escapeValue: false },
     react: { useSuspense: true },
   })

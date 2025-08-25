@@ -29,7 +29,11 @@ export default function SearchPage() {
         <StyledSubTitle>{t('home.intro')}</StyledSubTitle>
 
         <Stack spacing={3}>
-          <SearchForm initialQuery={q} onSubmitQuery={setQ} title={t('search.title', { defaultValue: 'Search' })} />
+          <SearchForm
+            initialQuery={q}
+            onSubmitQuery={setQ}
+            title={t('search.title', { defaultValue: 'Search' })}
+          />
 
           <SearchResults
             items={items}

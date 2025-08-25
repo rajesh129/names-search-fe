@@ -6,4 +6,3 @@ export const searchSchema = Yup.object({
     .matches(/^[\p{L}]+$/u, 'Only letters are allowed')
     .required('Search query is required'),
 })
-

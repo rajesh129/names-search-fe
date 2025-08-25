@@ -7,16 +7,12 @@ import * as React from 'react'
  * @param delay       debounce delay before showing loader
  * @param minDuration minimum time loader should remain visible once shown
  */
-export function useDebouncedLoader(
-  isLoading: boolean,
-  delay = 600,
-  minDuration = 500,
-) {
+export function useDebouncedLoader(isLoading: boolean, delay = 600, minDuration = 500) {
   const [visible, setVisible] = React.useState(false)
   const showSince = React.useRef<number | null>(null)
 
   React.useEffect(() => {
-    let timer: number | undefined;
+    let timer: number | undefined
 
     if (isLoading) {
       // wait for debounce before showing

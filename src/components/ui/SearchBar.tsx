@@ -31,15 +31,15 @@ export default function SearchBar({
       slotProps={{
         input: {
           endAdornment: (
-             <InputAdornment position="end">
-                <IconButton
+            <InputAdornment position="end">
+              <IconButton
                 edge="end"
                 color="primary"
                 aria-label="search"
-                type="submit"            // ⬅️ submit enclosing <form>
-                >
-                    <SearchIcon />
-                </IconButton>
+                type="submit" // ⬅️ submit enclosing <form>
+              >
+                <SearchIcon />
+              </IconButton>
             </InputAdornment>
           ),
         },

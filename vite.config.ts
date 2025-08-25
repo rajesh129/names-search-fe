@@ -15,5 +15,5 @@ export default defineConfig({
         // so keep it as-is (no rewrite).
       },
     },
-  }
+  },
 })

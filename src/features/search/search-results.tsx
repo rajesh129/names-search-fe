@@ -1,12 +1,21 @@
 // src/features/search/SearchResults.tsx
 import * as React from 'react'
-import { Stack, Paper, Typography, Pagination, CircularProgress, Divider, Box, IconButton } from '@mui/material'
+import {
+  Stack,
+  Paper,
+  Typography,
+  Pagination,
+  CircularProgress,
+  Divider,
+  Box,
+  IconButton,
+} from '@mui/material'
 import type { NameItem } from '../../types/get-names'
 import { SearchResultTitle, SearchTypePrimary, SearchTypeSecondary } from './style'
 import { useTranslation } from 'react-i18next'
 import theme from '../../theme'
 import { StyledChip } from '../../components/ui/FrequentlySearchedNames/style'
-import VolumeUpIcon from '@mui/icons-material/VolumeUp';
+import VolumeUpIcon from '@mui/icons-material/VolumeUp'
 import { useTamilTTS } from '../../hooks/useTamilTTS'
 import { SearchResultsSkeleton } from './search-result-skeleton'
 import { useDebouncedLoader } from '../../hooks/useDebouncedLoader'
@@ -28,9 +37,9 @@ export function SearchResults({
   error: string | null
   onPageChange: (p: number) => void
 }) {
-    const {t} = useTranslation();
-    const { speak, stop, hasTamilVoice } = useTamilTTS();
-    const showLoader = useDebouncedLoader(loading, 300, 600)
+  const { t } = useTranslation()
+  const { speak, stop, hasTamilVoice } = useTamilTTS()
+  const showLoader = useDebouncedLoader(loading, 300, 600)
 
   if (showLoader) {
     return <SearchResultsSkeleton count={5} />
@@ -50,7 +59,7 @@ export function SearchResults({
 
   return (
     <Stack spacing={1}>
-        <SearchResultTitle>{t('search.searchResultsTitle')}</SearchResultTitle>
+      <SearchResultTitle>{t('search.searchResultsTitle')}</SearchResultTitle>
       <Typography variant="body2" sx={{ opacity: 0.8 }}>
         {total} results
       </Typography>
@@ -59,8 +68,10 @@ export function SearchResults({
         <Paper key={`${r.tamil}-${idx}`} sx={{ p: 2 }}>
           <SearchTypePrimary variant="subtitle1">
             {r.tamil}
-            <IconButton onClick={() => speak(r.tamil)}><VolumeUpIcon /></IconButton>
-        </SearchTypePrimary>
+            <IconButton onClick={() => speak(r.tamil)}>
+              <VolumeUpIcon />
+            </IconButton>
+          </SearchTypePrimary>
           <SearchTypeSecondary variant="body2">
             <strong>English:</strong> {r.english.join(', ') || '—'}
           </SearchTypeSecondary>
@@ -68,24 +79,29 @@ export function SearchResults({
             <strong>French:</strong> {r.french.join(', ') || '—'}
           </SearchTypeSecondary>
           {r.description && (
-            <Box sx={{marginBottom: theme.spacing(2)}}>
-                <SearchTypeSecondary variant="body1" sx={{fontWeight: theme.typography.fontWeightMedium}}>Description</SearchTypeSecondary>
-                <Typography variant="body2" sx={{ mt: 0.5 }}>
+            <Box sx={{ marginBottom: theme.spacing(2) }}>
+              <SearchTypeSecondary
+                variant="body1"
+                sx={{ fontWeight: theme.typography.fontWeightMedium }}
+              >
+                Description
+              </SearchTypeSecondary>
+              <Typography variant="body2" sx={{ mt: 0.5 }}>
                 {r.description}
-                </Typography>
+              </Typography>
             </Box>
           )}
-            <Stack direction="row" spacing={1.5} sx={{marginBottom: theme.spacing(1)}}>
-                <StyledChip label="Tamil" />
-                <StyledChip label="French" />
-                <StyledChip label="English" />
-            </Stack>
+          <Stack direction="row" spacing={1.5} sx={{ marginBottom: theme.spacing(1) }}>
+            <StyledChip label="Tamil" />
+            <StyledChip label="French" />
+            <StyledChip label="English" />
+          </Stack>
         </Paper>
       ))}
 
       {pageCount > 1 && (
         <Pagination
-            color="secondary"
+          color="secondary"
           count={pageCount}
           page={page}
           onChange={(_, p) => onPageChange(p)}

@@ -1,30 +1,30 @@
 {
-  "home": { 
-    "title": "Names Carry Generations Within Them", 
-    "intro": "Discover the roots, stories, and timeless beauty behind each name.", 
+  "home": {
+    "title": "Names Carry Generations Within Them",
+    "intro": "Discover the roots, stories, and timeless beauty behind each name.",
     "searchHelperText": "Type a keyword and hit search",
     "culturalHeritageTitle": "Carrying the Echoes of Our Ancestors",
     "culturalHeritageDescription": "Names are not just labels — they are living connections to where we come from. In Tamil culture, every name holds the rhythm of our language, the depth of our traditions, and the memory of our ancestors. These names carry stories of courage, compassion, and wisdom passed down through generations. They remind us that our heritage is not locked in the past but continues to live and breathe through the identities we carry today. To know a name is to honor a legacy, to cherish a culture, and to keep alive the timeless spirit of Tamil identity.",
     "frequentlySearchedTitle": "Frequently Searched, Deeply Remembered",
     "frequentlySearchedSubtitle": "These names are more than trends — they are touchstones of our cultural memory.",
     "exploreMoreNamesBtn": "Explore more names"
-},
-  "search": { 
-    "title": "Search", 
+  },
+  "search": {
+    "title": "Search",
     "query": "Query in URL",
     "searchResultsTitle": "The Stories Found in Your Search"
   },
-  "footer": { 
-        "title": "Names Connect Us Across Time", 
-        "subTitle": "Through each search, we honor the past, celebrate the present, and inspire the future." ,
-        "explore": "Explore",
-        "englishNames": "English Names",
-        "tamilNames": "Tamil Names",
-        "frenchNames": "French Names",
-        "community": "Community",
-        "aboutUs": "About us",
-        "contactUs": "Contact us",
-        "submitAName": "Submit a name",
-        "copyrightText": "© 2025 Celebrating cultural heritage through names."
-    }
+  "footer": {
+    "title": "Names Connect Us Across Time",
+    "subTitle": "Through each search, we honor the past, celebrate the present, and inspire the future.",
+    "explore": "Explore",
+    "englishNames": "English Names",
+    "tamilNames": "Tamil Names",
+    "frenchNames": "French Names",
+    "community": "Community",
+    "aboutUs": "About us",
+    "contactUs": "Contact us",
+    "submitAName": "Submit a name",
+    "copyrightText": "© 2025 Celebrating cultural heritage through names."
+  }
 }
