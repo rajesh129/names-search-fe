@@ -8,6 +8,8 @@ import theme from '../../theme'
 import { StyledChip } from '../../components/ui/FrequentlySearchedNames/style'
 import VolumeUpIcon from '@mui/icons-material/VolumeUp';
 import { useTamilTTS } from '../../hooks/useTamilTTS'
+import { SearchResultsSkeleton } from './search-result-skeleton'
+import { useDebouncedLoader } from '../../hooks/useDebouncedLoader'
 
 export function SearchResults({
   items,
@@ -28,13 +30,10 @@ export function SearchResults({
 }) {
     const {t} = useTranslation();
     const { speak, stop, hasTamilVoice } = useTamilTTS();
+    const showLoader = useDebouncedLoader(loading, 300, 600)
 
-  if (loading) {
-    return (
-      <Stack direction="row" alignItems="center" spacing={1}>
-        <CircularProgress size={20} /> <span>Loading…</span>
-      </Stack>
-    )
+  if (showLoader) {
+    return <SearchResultsSkeleton count={5} />
   }
 
   if (error) {
