@@ -1,0 +1,55 @@
+# Dependencies
+/node_modules
+/.pnp
+.pnp.js
+
+# Build output
+/dist
+/build
+
+# Logs
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+*.log
+
+# Editor directories and files
+.vscode/*
+!.vscode/extensions.json
+.idea
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
+
+# OS-specific
+.DS_Store
+Thumbs.db
+
+# Env files
+.env
+.env.local
+.env.*.local
+
+# TypeScript
+*.tsbuildinfo
+
+# Coverage
+/coverage
+
+# ESLint & Prettier cache
+.eslintcache
+.prettiercache
+
+# Misc
+*.pid
+*.seed
+*.pid.lock
+*.tgz
+
+# Optional: lock files (if you want to enforce single package manager, uncomment)
+/package-lock.json
+/yarn.lock
+/pnpm-lock.yaml

@@ -1,0 +1,4 @@
+{
+  "home": { "title": "Welcome", "intro": "This app is multilingual." },
+  "search": { "title": "Search", "query": "Query in URL" }
+}

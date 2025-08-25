@@ -1,0 +1,21 @@
+{
+  "root": true,
+  "env": { "browser": true, "es2021": true },
+  "extends": [
+    "plugin:react/recommended",
+    "plugin:react-hooks/recommended",
+    "eslint:recommended",
+    "plugin:@typescript-eslint/recommended",
+    "plugin:prettier/recommended"
+  ],
+  "parser": "@typescript-eslint/parser",
+  "parserOptions": { "ecmaVersion": 2022, "sourceType": "module" },
+  "plugins": ["react-refresh", "unused-imports"],
+  "settings": { "react": { "version": "detect" } },
+  "ignorePatterns": ["dist", "node_modules"],
+  "rules": {
+    "react-refresh/only-export-components": ["warn", { "allowConstantExport": true }],
+    "unused-imports/no-unused-imports": "error",
+    "no-console": ["warn", { "allow": ["warn", "error"] }]
+  }
+}
