@@ -26,5 +26,17 @@
     "contactUs": "Contact us",
     "submitAName": "Submit a name",
     "copyrightText": "© 2025 Celebrating cultural heritage through names."
+  },
+  "excelUpload": {
+    "title": "Upload Excel File",
+    "description": "Please upload an Excel file containing the names."
+  },
+  "uploadPage": {
+    "title": "Upload Excel and View Names",
+    "description": "Upload an Excel file to add new names to the database."
+  },
+  "uploadExcelTable": {
+    "publishSelectedRowsBtnText": "Publish {{rowLength}} Selected Rows",
+    "publishAllRowsBtnText": "Publish All Rows"
   }
 }

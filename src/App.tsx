@@ -7,6 +7,7 @@ import LanguageGate from './language-gate'
 export default function App() {
   const HomePage = React.lazy(() => import('./pages/home'))
   const SearchPage = React.lazy(() => import('./pages/search'))
+  const UploadPage = React.lazy(() => import('./pages/admin/upload'))
 
   return (
     <ThemedApp>
@@ -24,6 +25,7 @@ export default function App() {
             <Route index element={<Navigate to="home" replace />} />
             <Route path="home" element={<HomePage />} />
             <Route path="search" element={<SearchPage />} />
+            <Route path="admin/upload" element={<UploadPage />} />
           </Route>
           <Route path="*" element={<Navigate to="/en/home" replace />} />
         </Routes>
