@@ -2,7 +2,7 @@
 import axios from 'axios'
 
 export const api = axios.create({
-  baseURL: import.meta.env.VITE_API_BASE_URL || '/api', // proxy-friendly
+  baseURL: '/api', // proxy-friendly
   timeout: 20000,
 })
 
