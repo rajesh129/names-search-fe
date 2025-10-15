@@ -50,57 +50,41 @@ declare module '@mui/material/IconButton' {
 export const theme = createTheme({
   direction: 'ltr',
   palette: {
-    mode: 'light',
+    mode: 'dark',
     primary: {
-      main: MAROON,
-      light: '#9a1a1a',
-      dark: WINE_RED,
-      contrastText: WHITE,
+      main: '#2D5BFF',
+      light: '#5E7BFF',
+      dark: '#1B2142',
+      contrastText: '#FFFFFF',
     },
     secondary: {
-      main: CRIMSON,
-      light: '#bd3f3f',
-      dark: '#7b1d1d',
-      contrastText: WHITE,
+      main: '#5E5EFF',
     },
-    // Custom accent (gold) usable like color="accent"
     accent: {
-      main: GOLD,
+      main: '#C9A635',
       light: '#d8ba53',
       dark: '#9f7f1f',
-      contrastText: CHARCOAL,
-    },
-    success: {
-      main: '#2e7d32',
-    },
-    info: {
-      main: '#0288d1',
-    },
-    warning: {
-      main: '#ed6c02',
-    },
-    error: {
-      main: '#d32f2f',
+      contrastText: '#0B0E19',
     },
     background: {
-      default: LIGHT_GRAY,
-      paper: WHITE,
+      default: '#0B0E19',
+      paper: '#1B2142',
     },
     text: {
-      primary: CHARCOAL,
-      secondary: '#4c4c4c',
+      primary: '#FFFFFF',
+      secondary: '#A3A6B2',
     },
-    divider: '#e7e7e7',
+    divider: '#1D1F2A',
     neutrals: {
-      light: LIGHT_GRAY,
-      dark: CHARCOAL,
-      white: WHITE,
+      light: '#F4F4F4',
+      dark: '#0B0E19',
+      white: '#FFFFFF',
     },
   },
 
   typography: {
     fontFamily:
-      'Inter, ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Apple Color Emoji", "Segoe UI Emoji"',
+      'Futura, "Helvetica Neue", Arial, "Noto Sans", "Apple Color Emoji", "Segoe UI Emoji"',
     h1: { fontWeight: 700 },
     h2: { fontWeight: 700 },
     h3: { fontWeight: 700 },

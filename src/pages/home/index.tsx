@@ -7,8 +7,7 @@ import {
   FrequentlySearchedTitle,
   StyledH2,
   StyledSubTitle,
-} from './style'
-import SearchBar from '../../components/ui/SearchBar'
+} from './style';
 import theme from '../../theme'
 import { FrequentlySearchedNames } from '../../components/ui/FrequentlySearchedNames'
 import { Footer } from '../../components/ui/Footer'

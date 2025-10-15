@@ -4,7 +4,7 @@ export const FooterContainer = styled(Box)(({ theme }) => ({
   paddingLeft: theme.spacing(4),
   paddingRight: theme.spacing(4),
   paddingTop: theme.spacing(4),
-  backgroundColor: theme.palette.accent.dark,
+  backgroundColor: theme.palette.primary.dark,
   color: theme.palette.primary.contrastText,
 }))
 
@@ -22,7 +22,7 @@ export const FooterSubTitle = styled('p')(({ theme }) => ({
 }))
 
 export const SubFooterContainer = styled('p')(({ theme }) => ({
-  backgroundColor: theme.palette.accent.main,
+  backgroundColor: theme.palette.primary.main,
   textAlign: 'center',
   fontWeight: theme.typography.fontWeightRegular,
   padding: theme.spacing(1),
