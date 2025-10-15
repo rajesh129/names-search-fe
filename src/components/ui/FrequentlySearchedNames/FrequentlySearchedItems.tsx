@@ -9,8 +9,6 @@ interface FrequentlySearchedItemsProps {
 }
 
 export const FrequentlySearchedItems = ({ title, alias, languages }: FrequentlySearchedItemsProps) => {
-  console.log({ title, alias, languages });
-  
   return (
     <Grid2 size={{ xs: 6, md: 3 }}>
       <Paper

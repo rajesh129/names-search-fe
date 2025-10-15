@@ -1,5 +1,5 @@
 import React from 'react'
-import { Typography, Paper, Container, Box, Stack, Button } from '@mui/material'
+import { Paper, Container, Box, Button } from '@mui/material'
 import { useTranslation } from 'react-i18next'
 import {
   CulturalHeritageTitle,
@@ -26,10 +26,10 @@ export default function HomePage() {
         <StyledSubTitle>{t('home.intro')}</StyledSubTitle>
         <SearchForm
           initialQuery=""
-          onSubmitQuery={(query) => {
+          onSubmitQuery={(query, language) => {
             const q = query.trim()
             if (q) {
-              navigate(`/${lng}/search?q=${encodeURIComponent(q)}`)
+              navigate(`/${lng}/search?q=${encodeURIComponent(q)}&l=${language}`)
             }
           }}
         />
